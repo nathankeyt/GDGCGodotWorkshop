@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://fewowg26hndi"]
+
+[ext_resource type="PackedScene" uid="uid://dlxnw8fpj01ht" path="res://Actors/Player/player.tscn" id="1_puf3r"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_qsb76"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c06dw"]
+size = Vector2(500, 50)
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_puf3r")]
+position = Vector2(441, 242)
+speed = 300.0
+jump_velocity = 750.0
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(363, 363)
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor"]
+scale = Vector2(500, 50)
+texture = SubResource("CanvasTexture_qsb76")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("RectangleShape2D_c06dw")
+
+[node name="Floor2" type="StaticBody2D" parent="."]
+position = Vector2(815, 253)
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor2"]
+scale = Vector2(500, 50)
+texture = SubResource("CanvasTexture_qsb76")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2"]
+shape = SubResource("RectangleShape2D_c06dw")
