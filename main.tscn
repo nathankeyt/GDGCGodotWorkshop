@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://fewowg26hndi"]
 
 [ext_resource type="PackedScene" uid="uid://dlxnw8fpj01ht" path="res://Actors/Player/player.tscn" id="1_puf3r"]
-[ext_resource type="PackedScene" uid="uid://qyc5y7hq6qd7" path="res://enemy.tscn" id="2_y5458"]
+[ext_resource type="PackedScene" uid="uid://qyc5y7hq6qd7" path="res://Actors/Enemies/enemy.tscn" id="2_y5458"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_qsb76"]
 
