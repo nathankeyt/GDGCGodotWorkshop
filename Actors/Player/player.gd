@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export var projectile_scene: Resource;
 @export var projectile_speed = 1000.0
 
+
 func _physics_process(delta: float) -> void:
 	#Gravity
 	if not is_on_floor():
@@ -13,6 +14,13 @@ func _physics_process(delta: float) -> void:
 	# Horizontal movement
 	var direction = Input.get_axis("left", "right")
 	velocity.x = direction * speed
+	
+	# Set animation
+	$AnimationTree.set("parameters/BlendSpace1D/blend_position", abs(direction))
+	
+	# Set direction
+	if direction:
+		$Sprite2D.flip_h = direction - 1
 	
 	# Jumping
 	if Input.is_action_just_pressed("jump") and is_on_floor():

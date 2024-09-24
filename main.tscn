@@ -35,4 +35,4 @@ texture = SubResource("CanvasTexture_qsb76")
 shape = SubResource("RectangleShape2D_c06dw")
 
 [node name="Enemy" parent="." instance=ExtResource("2_y5458")]
-position = Vector2(829, 212)
+position = Vector2(762, 212)
