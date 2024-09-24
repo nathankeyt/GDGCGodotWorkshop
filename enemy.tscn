@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://qyc5y7hq6qd7"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_cn6l5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bh4gf"]
+size = Vector2(32, 32)
+
+[node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 0, 1)
+scale = Vector2(32, 32)
+texture = SubResource("CanvasTexture_cn6l5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_bh4gf")

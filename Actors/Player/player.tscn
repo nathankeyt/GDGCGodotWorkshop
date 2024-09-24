@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dlxnw8fpj01ht"]
+[gd_scene load_steps=5 format=3 uid="uid://dlxnw8fpj01ht"]
 
 [ext_resource type="Script" path="res://Actors/Player/player.gd" id="1_gbyrg"]
+[ext_resource type="PackedScene" uid="uid://e2n7sauclumr" path="res://Actors/Projectile/projectile.tscn" id="2_v11ff"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_qkvqv"]
 
@@ -9,8 +10,8 @@ size = Vector2(32, 32)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_gbyrg")
-speed = 200.0
 jump_velocity = 400.0
+projectile_scene = ExtResource("2_v11ff")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(32, 32)
